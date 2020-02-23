@@ -1,3 +1,2 @@
-## Task 1 Errors and Bugs
-
+## Task 1 Bugs, Errors and Fixes
 Nothing for now.
