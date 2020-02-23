@@ -36,14 +36,14 @@ class NearEarthObject(object):
         Returns info about the object
         """
 
-        return f'NearEarthObject id:{self.id} name:{self.name} orbits: {[orbit.name for orbit in self.orbits]} orbit_dates:{[orbit.close_approach_date for orbit in self.orbits]}'
+        return f'NearEarthObject id:{self.id} name:{self.name} orbits: {[orbit.neo_name for orbit in self.orbits]} orbit_dates:{[orbit.close_approach_date for orbit in self.orbits]}'
     
     def __repr__(self):
         """
         Returns info about the object for debugging purposes
         """
 
-        return f'NearEarthObject id:{self.id} name:{self.name} orbits: {[orbit.name for orbit in self.orbits]} orbit_dates:{[orbit.close_approach_date for orbit in self.orbits]}'
+        return f'NearEarthObject id:{self.id} name:{self.name} orbits: {[orbit.neo_name for orbit in self.orbits]} orbit_dates:{[orbit.close_approach_date for orbit in self.orbits]}'
 
 
 class OrbitPath(object):
@@ -67,4 +67,4 @@ class OrbitPath(object):
         Returns info about the object
         """
 
-        return f'OrbitPath neo_name:{self.name} close_approach_date:{self.close_approach_date} miss_distance_kilometers:{self.miss_distance_kilometers}'
+        return f'OrbitPath name:{self.neo_name} orbit_date:{self.close_approach_date} miss_distance_km:{self.miss_distance_kilometers}'
