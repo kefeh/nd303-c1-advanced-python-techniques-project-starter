@@ -14,7 +14,7 @@ class NearEarthObject(object):
         self.id = kwargs.get('id', None)
         self.name = kwargs.get('name', 'no name')
 
-        self.estimated_diameter_min_kilometers = float(kwargs.get('estimated_diameter_min_kilometers', 0))
+        self.diameter_min_km = float(kwargs.get('estimated_diameter_min_kilometers', 0))
         self.is_potentially_hazardous_asteroid = kwargs.get('is_potentially_hazardous_asteroid', False)
         
         self.orbits = []#Orbits
@@ -58,7 +58,7 @@ class OrbitPath(object):
         :param kwargs:    dict of attributes about a given orbit, only a subset of attributes used
         """
         # TODO: What instance variables will be useful for storing on the Near Earth Object?
-        self.name = kwargs.get('name', 'no name')
+        self.neo_name = kwargs.get('name', 'no name')
         self.miss_distance_kilometers = float(kwargs.get('miss_distance_kilometers', 0))
         self.close_approach_date = kwargs.get('close_approach_date', None)
 
