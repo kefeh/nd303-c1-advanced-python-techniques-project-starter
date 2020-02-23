@@ -36,14 +36,14 @@ class NearEarthObject(object):
         Returns info about the object
         """
 
-        return f'NearEarthObject id:{self.id} name:{self.name} harzardous_asteriod:{self.is_potentially_hazardous_asteroid} orbit_dates:{[orbit.close_approach_date for orbit in self.orbits]}'
+        return f'NearEarthObject id:{self.id} name:{self.name} orbits: {[orbit.name for orbit in self.orbits]} orbit_dates:{[orbit.close_approach_date for orbit in self.orbits]}'
     
     def __repr__(self):
         """
         Returns info about the object for debugging purposes
         """
 
-        return f'NearEarthObject id:{self.id} name:{self.name} harzardous_asteriod:{self.is_potentially_hazardous_asteroid} orbit_dates:{[orbit.close_approach_date for orbit in self.orbits]}'
+        return f'NearEarthObject id:{self.id} name:{self.name} orbits: {[orbit.name for orbit in self.orbits]} orbit_dates:{[orbit.close_approach_date for orbit in self.orbits]}'
 
 
 class OrbitPath(object):
@@ -58,7 +58,7 @@ class OrbitPath(object):
         :param kwargs:    dict of attributes about a given orbit, only a subset of attributes used
         """
         # TODO: What instance variables will be useful for storing on the Near Earth Object?
-        self.neo_name = kwargs.get('name', 'no name')
+        self.name = kwargs.get('name', 'no name')
         self.miss_distance_kilometers = float(kwargs.get('miss_distance_kilometers', 0))
         self.close_approach_date = kwargs.get('close_approach_date', None)
 
@@ -67,4 +67,4 @@ class OrbitPath(object):
         Returns info about the object
         """
 
-        return f'OrbitPath neo_name:{self.neo_name} close_approach_date:{self.close_approach_date} missed_distance_kilometers:{self.miss_distance_kilometers}'
+        return f'OrbitPath neo_name:{self.name} close_approach_date:{self.close_approach_date} miss_distance_kilometers:{self.miss_distance_kilometers}'
