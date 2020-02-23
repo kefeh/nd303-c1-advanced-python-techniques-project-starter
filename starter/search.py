@@ -87,7 +87,7 @@ class Filter(object):
     """
     Options = {
         # TODO: Create a dict of filter name to the NearEarthObject or OrbitalPath property
-        'diameter': 'estimated_diameter_min_kilometers',
+        'diameter': 'diameter_min_km',
         'distance': 'miss_distance_kilometers',
         'is_hazardous': 'is_potentially_hazardous_asteroid'
     }
